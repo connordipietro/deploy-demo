@@ -8,7 +8,6 @@ let tweetRoute = express();
 
 tweetRoute.route("/")
     .get((req, res) => {
-        console.log('success')
         Tweet.find((err, tweets) => {
             if (err) console.error(err);
             res.send(tweets);

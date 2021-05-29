@@ -38,7 +38,7 @@ export default class FakeTwitter extends Component {
                         return (
                             <div key={_id}>
                                 <h1>{text}</h1>
-                                <Comments tweetId={_id}></Comments>
+                             
                             </div>
                         )
                     })}
