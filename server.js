@@ -18,9 +18,9 @@ app.use("/tweets", tweetRoute);
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/twitter", { useMongoClient: true }, (err) => {
+/* mongoose.connect("mongodb://localhost:27017/twitter", { useMongoClient: true }, (err) => {
     if (err) console.error(err);
-});
+}); */
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
