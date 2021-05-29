@@ -10,10 +10,9 @@ let tweetRoute = express();
 
 tweetRoute.route("/")
     .get((req, res) => {
-        Tweet.find((err, tweets) => {
-            if (err) console.error(err);
-            res.send(tweets);
-        });
+        console.log(res);
+        console.log(req);
+        res.end();
     })
     .post((req, res) => {
         let newTweet = new Tweet(req.body);
