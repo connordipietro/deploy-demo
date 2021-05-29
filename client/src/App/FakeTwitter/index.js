@@ -14,6 +14,7 @@ export default class FakeTwitter extends Component {
     componentDidMount() {
         axios.get(tweetUrl)
             .then((response) => {
+                console.log(response);
                 this.setState({
                     tweets: response.data,
                     loading: false

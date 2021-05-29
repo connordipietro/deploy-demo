@@ -14,6 +14,7 @@ export default class Comments extends Component {
         let { tweetId } = this.props
         axios.get(`${commentUrl}${tweetId}/comments`)
             .then(response => {
+                console.log(response)
                 this.setState({
                     comments: response.data,
                     loading: false
