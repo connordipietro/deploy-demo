@@ -22,7 +22,7 @@ mongoose.Promise = global.Promise;
     if (err) console.error(err);
 }); */
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING, { useNewUrlParser: true }).then(() => console.log('connected'));
 
 
 app.get("*", (req, res) => {
