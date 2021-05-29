@@ -6,12 +6,14 @@ let Tweet = require("../models/tweet");
 
 let tweetRoute = express();
 
+let test = {
+    text: "testtttttt",
+    _id: 123412341234
+}
+
 tweetRoute.route("/")
     .get((req, res) => {
-        Tweet.find((err, tweets) => {
-            if (err) console.error(err);
-            res.send(tweets);
-        });
+       res.send(test)
     })
     .post((req, res) => {
         let newTweet = new Tweet(req.body);
